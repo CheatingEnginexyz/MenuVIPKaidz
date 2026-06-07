@@ -3,676 +3,208 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-    <title>𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛</title>
-    <link rel="stylesheet" href="./𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛_files/all.min.css">
-    <link rel="stylesheet" href="./𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛_files/styles.css">
+    <title>SUPER TECH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        #vgGate {
-            position: fixed;
-            inset: 0;
-            z-index: 2147483647;
-            display: grid;
-            place-items: center;
-            background: rgba(3, 6, 18, .82);
-            backdrop-filter: blur(20px)
-        }
-        #vgGate .vg-panel {
-            width: min(860px, 95vw);
-            max-height: min(720px, 95vh);
-            overflow-y: auto;
-            border-radius: 32px;
-            padding: 36px;
-            background: linear-gradient(135deg, rgba(12, 17, 38, .95), rgba(26, 33, 72, .9));
-            color: #f4f6ff;
-            font-family: "Inter", "SF Pro Display", system-ui, -apple-system, sans-serif;
-            border: 1px solid rgba(119, 139, 255, .25);
-            box-shadow: 0 45px 95px rgba(2, 4, 12, .9)
-        }
-        #vgGate .vg-hd {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 24px;
-            margin-bottom: 32px
-        }
-        #vgGate .vg-brand-block {
-            display: flex;
-            flex-direction: column;
-            gap: 6px
-        }
-        #vgGate .vg-tag {
-            margin: 0;
-            font-size: 0.75rem;
-            letter-spacing: 0.38em;
-            color: #7dc8ff;
-            text-transform: uppercase
-        }
-        #vgGate .vg-brand {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 800;
-            letter-spacing: 0.06em;
-            color: #fff
-        }
-        #vgGate .vg-close {
-            border: none;
-            background: rgba(255, 255, 255, .08);
-            color: #fff;
-            border-radius: 50%;
-            width: 46px;
-            height: 46px;
-            display: grid;
-            place-items: center;
-            font-size: 1.3rem;
-            cursor: pointer;
-            transition: .2s
-        }
-        #vgGate .vg-close:hover {
-            background: rgba(255, 255, 255, .16)
-        }
-        #vgGate .vg-body {
-            display: grid;
-            grid-template-columns: 1.15fr .85fr;
-            gap: 26px
-        }
-        #vgGate .vg-card {
-            background: rgba(255, 255, 255, .02);
-            border: 1px solid rgba(255, 255, 255, .08);
-            border-radius: 22px;
-            padding: 22px;
-            box-shadow: 0 22px 40px rgba(3, 5, 12, .6)
-        }
-        #vgGate .vg-label {
-            font-size: 0.75rem;
-            color: #9fb6ff;
-            margin-bottom: 8px;
-            letter-spacing: 0.26em;
-            text-transform: uppercase
-        }
-        #vgGate .vg-field {
-            display: grid;
-            grid-template-columns: 1fr auto auto;
-            gap: 12px;
-            align-items: center
-        }
-        #vgGate .vg-input {
-            padding: 14px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, .18);
-            background: rgba(5, 8, 22, .92);
-            color: #fff;
-            font-size: 1.05rem;
-            width: 100%
-        }
-        #vgGate .vg-icon {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 14px;
-            border-radius: 14px;
-            border: 1px solid rgba(130, 148, 255, .45);
-            background: rgba(9, 14, 32, .95);
-            color: #e5eaff;
-            cursor: pointer;
-            transition: transform .2s, border-color .2s
-        }
-        #vgGate .vg-icon:hover {
-            transform: translateY(-1px);
-            border-color: rgba(152, 170, 255, .75)
-        }
-        #vgGate .vg-icon svg {
-            width: 17px;
-            height: 17px;
-            display: block
-        }
-        #vgGate .vg-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 20px
-        }
-        #vgGate .vg-btn {
-            border: none;
-            border-radius: 16px;
-            padding: 13px 22px;
-            font-weight: 650;
-            letter-spacing: .18em;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: .2s
-        }
-        #vgGate .vg-btn--pri {
-            background: linear-gradient(120deg, #6286ff, #8ab6ff);
-            color: #040611;
-            box-shadow: 0 16px 35px rgba(98, 134, 255, .45)
-        }
-        #vgGate .vg-btn--ghost {
-            background: rgba(255, 255, 255, .05);
-            color: #e9edff;
-            border: 1px solid rgba(255, 255, 255, .14)
-        }
-        #vgGate .vg-btn:hover {
-            transform: translateY(-2px)
-        }
-        #vgGate .vg-summary {
-            display: grid;
-            gap: 18px
-        }
-        #vgGate .vg-summary-block {
-            background: rgba(255, 255, 255, .03);
-            border: 1px solid rgba(255, 255, 255, .08);
-            border-radius: 18px;
-            padding: 18px
-        }
-        #vgGate .vg-summary-block h4 {
-            margin: 0 0 6px;
-            font-size: 0.78rem;
-            letter-spacing: .3em;
-            color: #7da4ff;
-            text-transform: uppercase
-        }
-        #vgGate .vg-summary-block p {
-            margin: 0;
-            color: #f5f7ff;
-            font-size: 1.05rem;
-            font-weight: 600
-        }
-        #vgGate .vg-msg {
-            margin-top: 24px;
-            padding: 14px 18px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, .08);
-            background: rgba(255, 255, 255, .03);
-            font-size: .95rem;
-            color: #d7e2ff
-        }
-        #vgGate .vg-msg.ok {
-            border-color: rgba(73, 245, 196, .4);
-            background: rgba(73, 245, 196, .14);
-            color: #d5ffef
-        }
-        #vgGate .vg-msg.warn {
-            border-color: rgba(255, 214, 102, .4);
-            background: rgba(255, 214, 102, .12);
-            color: #fff2c0
-        }
-        #vgGate .vg-msg.err {
-            border-color: rgba(255, 115, 115, .45);
-            background: rgba(255, 95, 95, .12);
-            color: #ffd7d7
-        }
-        body.vg-locked {
-            overflow: hidden
-        }
-        body.vg-locked>*:not(#vgGate) {
-            filter: blur(4px);
-            pointer-events: none !important;
-            user-select: none !important
-        }
-        #vgGate details {
-            margin-top: 16px;
-            border: 1px dashed rgba(255, 255, 255, .14);
-            border-radius: 14px;
-            overflow: hidden
-        }
-        #vgGate summary {
-            padding: 12px 18px;
-            cursor: pointer;
-            list-style: none;
-            background: rgba(4, 7, 18, .92);
-            color: #c1ceff;
-            font-weight: 600
-        }
-        #vgGate summary::-webkit-details-marker {
-            display: none
-        }
-        #vgGate .vg-pre {
-            margin: 0;
-            padding: 14px 18px;
-            background: rgba(2, 4, 12, .9);
-            color: #d1dbff;
-            max-height: 220px;
-            overflow: auto;
-            font-family: "JetBrains Mono", "SFMono-Regular", monospace;
-            font-size: 0.85rem
-        }
-        #vgGate .vg-foot {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 16px;
-            color: #b8c6ff;
-            font-size: .85rem;
-            letter-spacing: .18em;
-            text-transform: uppercase
-        }
-        #vgGate .vg-foot strong {
-            font-size: 1rem;
-            color: #fff
-        }
-        @media(max-width:720px) {
-            #vgGate .vg-body {
-                grid-template-columns: 1fr
-            }
-            #vgGate .vg-field {
-                grid-template-columns: 1fr
-            }
-            #vgGate .vg-panel {
-                padding: 28px
-            }
-        }
-        .hide-center-reticle #ui_center_lock_nudge {
-            display: none !important;
-        }
+        :root{--bg:#0a0e18;--panel:#111827;--border:#1e293b;--text:#c9d1d9;--accent:#3b82f6;--green:#22c55e;--red:#ef4444;--gold:#f59e0b}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+        #particles-canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+        .container{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:20px}
+        .header{text-align:center;padding:30px 0 20px}
+        .title{font-size:1.8rem;font-weight:800;color:#fff;margin-bottom:10px}
+        .title b{background:linear-gradient(135deg,#3b82f6,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .badge{background:var(--green);color:#000;border-radius:50%;width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;vertical-align:middle;margin-left:6px}
+        .special-menu-btn{background:linear-gradient(135deg,#f59e0b,#ef4444);border:none;color:#fff;padding:10px 24px;border-radius:25px;font-weight:700;cursor:pointer;font-size:.95rem;margin:10px 0;transition:transform .2s}
+        .special-menu-btn:hover{transform:scale(1.05)}
+        .section{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:16px}
+        .section-title{font-size:.8rem;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+        .section-icon{color:var(--accent)}
+        .function-item{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border:1px solid rgba(255,255,255,.06);border-radius:12px;margin-bottom:8px;background:rgba(255,255,255,.02);transition:border-color .3s}
+        .function-text{font-weight:600;font-size:.95rem}
+        .toggle-switch{position:relative}
+        .toggle-input{display:none}
+        .toggle-label{width:48px;height:26px;background:#374151;border-radius:13px;display:block;cursor:pointer;position:relative;transition:background .3s}
+        .toggle-slider{position:absolute;top:3px;left:3px;width:20px;height:20px;background:#fff;border-radius:50%;transition:transform .3s}
+        .toggle-input:checked+.toggle-label{background:var(--green)}
+        .toggle-input:checked+.toggle-label .toggle-slider{transform:translateX(22px)}
+        .sensi-item{display:flex;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
+        .sensi-item:last-child{border-bottom:none}
+        .sensi-icon{width:36px;height:36px;background:rgba(59,130,246,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-right:12px;color:var(--accent)}
+        .sensi-info{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+        .sensi-label{color:#94a3b8;font-size:.85rem}
+        .sensi-value{color:#fff;font-weight:600}
+        .dropdown{position:relative;display:inline-block}
+        .dropdown-select{background:#1e293b;color:#fff;border:1px solid var(--border);border-radius:8px;padding:6px 30px 6px 12px;font-size:.9rem;cursor:pointer;appearance:none}
+        .dropdown-arrow{position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;font-size:.7rem;color:#94a3b8}
+        .activate-btn{width:100%;background:linear-gradient(135deg,#22c55e,#10b981);border:none;color:#000;padding:16px;border-radius:14px;font-size:1.1rem;font-weight:700;cursor:pointer;margin:16px 0;transition:transform .2s}
+        .activate-btn:hover{transform:scale(1.02)}
+        .footer{text-align:center;color:#475569;font-size:.8rem;padding:20px 0}
+        .modal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center}
+        .modal.hidden{display:none}
+        .modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(4px)}
+        .modal-dialog{position:relative;background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:24px;width:90%;max-width:420px;max-height:80vh;overflow-y:auto}
+        .modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+        .modal-header h3{color:#fff;font-size:1.2rem}
+        .modal-close{background:none;border:none;color:#94a3b8;font-size:1.3rem;cursor:pointer}
+        .modal-infobox{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:10px;padding:12px;margin-bottom:16px;font-size:.9rem;display:flex;justify-content:space-between;align-items:center}
+        .infobox-close{background:none;border:none;color:#94a3b8;cursor:pointer}
+        .feature-list{list-style:none}
+        .feature{padding:8px 0}
+        .feature label{display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--text)}
+        .btn-primary{width:100%;background:var(--accent);border:none;color:#fff;padding:12px;border-radius:10px;font-weight:600;cursor:pointer;margin-top:12px}
+        .notice-modal{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center}
+        .notice-modal.hidden{display:none}
+        .notice-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.8)}
+        .notice-card{position:relative;background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:24px;width:90%;max-width:400px}
+        .notice-title{color:#fff;font-size:1.1rem;text-align:center;margin-bottom:16px}
+        .notice-list{list-style:none;margin-bottom:16px}
+        .notice-item{padding:6px 0;font-size:.9rem;display:flex;align-items:center;gap:8px}
+        .notice-actions{display:flex;gap:8px}
+        .btn-gold{flex:1;background:var(--gold);border:none;color:#000;padding:10px;border-radius:8px;font-weight:600;cursor:pointer}
+        .btn-red{flex:1;background:var(--red);border:none;color:#fff;padding:10px;border-radius:8px;font-weight:600;cursor:pointer}
+        .admin-card{text-align:center;margin-bottom:16px}
+        .admin-avatar{width:60px;height:60px;border-radius:50%;object-fit:cover;margin-bottom:8px}
+        .admin-name{color:#fff;font-weight:700}
+        .admin-role{color:#94a3b8;font-size:.85rem;margin-bottom:8px}
+        .uchiha-btn{display:inline-block;background:var(--accent);color:#fff;padding:6px 16px;border-radius:20px;text-decoration:none;font-size:.85rem;margin:4px}
+        .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#1e293b;color:#fff;padding:12px 24px;border-radius:25px;font-weight:600;z-index:9999;opacity:0;transition:opacity .3s}
+        .toast.show{opacity:1}
+        .announce{background:linear-gradient(135deg,#1e293b,#0f172a);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center}
+        .announce-content{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+        .announce-title{font-weight:700;color:#fff}
+        .announce-close{background:none;border:none;color:#94a3b8;cursor:pointer;font-size:1.2rem}
+        .tag{background:rgba(59,130,246,.15);color:var(--accent);padding:3px 10px;border-radius:15px;font-size:.75rem}
+        .announce-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+
+        #vgGate{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;background:rgba(3,6,18,.85);backdrop-filter:blur(20px)}
+        #vgGate .vg-panel{width:min(450px,92vw);border-radius:24px;padding:32px;background:linear-gradient(135deg,#0f172a,#1e293b);color:#f4f6ff;border:1px solid rgba(100,140,255,.3);box-shadow:0 40px 80px rgba(0,0,0,.8);text-align:center}
+        #vgGate .vg-tag{font-size:.7rem;letter-spacing:.4em;color:#7dc8ff;text-transform:uppercase;margin-bottom:4px}
+        #vgGate .vg-brand{font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:20px}
+        #vgGate .vg-input{width:100%;padding:14px;border-radius:14px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.5);color:#fff;font-size:1.1rem;text-align:center;margin-bottom:16px}
+        #vgGate .vg-input::placeholder{color:#64748b}
+        #vgGate .vg-btn--pri{width:100%;border:none;border-radius:14px;padding:14px;font-weight:700;font-size:1rem;cursor:pointer;background:linear-gradient(120deg,#3b82f6,#8b5cf6);color:#fff;letter-spacing:1px}
+        #vgGate .vg-msg{margin-top:16px;padding:10px;border-radius:10px;font-size:.9rem}
+        #vgGate .vg-msg.ok{background:rgba(34,197,94,.2);color:#bbf7d0}
+        #vgGate .vg-msg.err{background:rgba(239,68,68,.2);color:#fecaca}
+        body.vg-locked{overflow:hidden}
+        body.vg-locked>*:not(#vgGate){filter:blur(6px);pointer-events:none!important}
     </style>
 </head>
-<body data-mode="muot-ma" data-dpi="1.0">
-
-    <canvas id="particles-canvas" width="1920" height="953" style="width: 1920px; height: 953px;"></canvas>
+<body class="vg-locked">
+    <canvas id="particles-canvas"></canvas>
 
     <div class="container">
         <header class="header">
-            <h1 class="title">
-                <b>𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛</b>
-                <span class="badge"><i class="fas fa-check"></i></span>
-            </h1>
-            <button class="special-menu-btn" id="special-menu-btn">
-                <i class="fas fa-bolt"></i><span>𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛</span>
-            </button>
-            <section class="uchiha-admin"></section>
+            <h1 class="title"><b>SUPER TECH</b><span class="badge"><i class="fas fa-check"></i></span></h1>
+            <button class="special-menu-btn" id="special-menu-btn"><i class="fas fa-bolt"></i> SUPER TECH</button>
         </header>
 
-        <div id="announce-bar" class="announce" style="display: none;">
-            <div class="announce-content">
-                <i class="fas fa-bullhorn"></i>
-                <span class="announce-title">ĐÃ NÂNG CẤP DRAG SENSI → 𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛</span>
-                <div class="announce-tags">
-                    <span class="tag"><i class="fas fa-hand-sparkles"></i>Hz Touch+</span>
-                    <span class="tag"><i class="fas fa-arrows-rotate"></i>DPI động</span>
-                    <span class="tag"><i class="fas fa-floppy-disk"></i>Tự lưu cấu hình</span>
-                    <span class="tag"><i class="fas fa-rocket"></i>Chế độ Pro</span>
-                    <span class="tag"><i class="fas fa-shield-halved"></i>Bộ lọc rung</span>
-                </div>
-            </div>
-            <button class="announce-close" id="announce-close" aria-label="Đóng">
-                <i class="fas fa-times"></i>
-            </button>
+        <div class="announce" id="announce-bar" style="display:none">
+            <div class="announce-content"><i class="fas fa-bullhorn"></i><span class="announce-title">ĐÃ NÂNG CẤP → SUPER TECH</span></div>
+            <button class="announce-close" id="announce-close"><i class="fas fa-times"></i></button>
         </div>
 
-        <main class="main-content">
-            <section class="section" style="margin-top: 0px; padding-top: 12px;">
-                <h2 class="section-title"><i class="fas fa-cube section-icon"></i> CHỨC NĂNG 𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛</h2>
-
-                <div class="function-item" data-state="off" style="border-color: rgba(255, 255, 255, 0.06);">
-                    <div class="function-content">
-                        <span class="function-text">AIMLOCK ( Khoá Tâm Đầu )<span class="sub"></span></span>
-                    </div>
-                    <div class="toggle-switch" data-function="config">
-                        <input type="checkbox" id="config-toggle" class="toggle-input">
-                        <label for="config-toggle" class="toggle-label"><span class="toggle-slider"></span></label>
-                    </div>
-                </div>
-
-                <div class="function-item" data-state="off" style="border-color: rgba(255, 255, 255, 0.06);">
-                    <div class="function-content">
-                        <span class="function-text">FEATHER AIM ( Nhẹ Tâm )<span class="sub"></span></span>
-                    </div>
-                    <div class="toggle-switch" data-function="lux">
-                        <input type="checkbox" id="lux-toggle" class="toggle-input">
-                        <label for="lux-toggle" class="toggle-label"><span class="toggle-slider"></span></label>
-                    </div>
-                </div>
-
-                <div class="function-item" data-state="off" style="border-color: rgba(255, 255, 255, 0.06);">
-                    <div class="function-content">
-                        <span class="function-text">STEADY HOLD ( Đầm Tâm )<span class="sub"></span></span>
-                    </div>
-                    <div class="toggle-switch" data-function="fix-rung">
-                        <input type="checkbox" id="fix-rung-toggle" class="toggle-input">
-                        <label for="fix-rung-toggle" class="toggle-label"><span class="toggle-slider"></span></label>
-                    </div>
-                </div>
-
-                <div class="function-item" data-state="off" style="border-color: rgba(255, 255, 255, 0.06);">
-                    <div class="function-content">
-                        <span class="function-text">ANCHOR AIM ( Ghìm Tâm )<span class="sub"></span></span>
-                    </div>
-                    <div class="toggle-switch" data-function="nhe-tam">
-                        <input type="checkbox" id="nhe-tam-toggle" class="toggle-input">
-                        <label for="nhe-tam-toggle" class="toggle-label"><span class="toggle-slider"></span></label>
-                    </div>
-                </div>
-
-                <div class="function-item" data-state="off" style="border-color: rgba(255, 255, 255, 0.06);">
-                    <div class="function-content">
-                        <span class="function-text">DRIFT FIX ( Fix Lạc Đạn )<span class="sub"></span></span>
-                    </div>
-                    <div class="toggle-switch" data-function="lock-dau">
-                        <input type="checkbox" id="lock-dau-toggle" class="toggle-input">
-                        <label for="lock-dau-toggle" class="toggle-label"><span class="toggle-slider"></span></label>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title"><i class="fas fa-cube section-icon"></i>ĐỘ NHẠY 𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛</h2>
-
-                <div class="sensi-item">
-                    <div class="sensi-content">
-                        <div class="sensi-icon"><i class="fas fa-mobile-alt"></i></div>
-                        <div class="sensi-info"><span class="sensi-label">DEVICE:</span><span class="sensi-value">IPHONE</span></div>
-                    </div>
-                </div>
-
-                <div class="sensi-item">
-                    <div class="sensi-content">
-                        <div class="sensi-icon"><i class="fas fa-palette"></i></div>
-                        <div class="sensi-info">
-                            <span class="sensi-label">CHẾ ĐỘ PANEL : </span>
-                            <div class="dropdown">
-                                <select id="mode-select" class="dropdown-select">
-                                    <option value="muot-ma">Mượt Mà</option>
-                                    <option value="cao-cap">Cao Cấp</option>
-                                    <option value="tieu-chuan">Tiêu Chuẩn</option>
-                                </select>
-                                <i class="fas fa-chevron-down dropdown-arrow"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sensi-item">
-                    <div class="sensi-content">
-                        <div class="sensi-icon"><i class="fas fa-crosshairs"></i></div>
-                        <div class="sensi-info">
-                            <span class="sensi-label">DPI 𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛 :</span>
-                            <div class="dropdown">
-                                <select id="dpi-select" class="dropdown-select">
-                                    <option value="1.0">1.0x</option>
-                                    <option value="1.5">1.5x</option>
-                                    <option value="2.0">2.0x</option>
-                                    <option value="2.5">2.5x</option>
-                                    <option value="3.0">3.0x</option>
-                                </select>
-                                <i class="fas fa-chevron-down dropdown-arrow"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section" id="extra-section">
-                <h2 class="section-title"><i class="fas fa-cube section-icon"></i> RAM/CPU MONITOR REALTIME</h2>
-                <div class="console-mobile">
-                    <div class="cm-grid">
-                        <div class="cm-panel cm-panel-charts">
-                            <h4>Realtime charts</h4>
-                            <div class="cm-charts">
-                                <div class="cm-chart-box">
-                                    <div class="cm-chart-header">
-                                        <div class="cm-label">CPU Load <span id="cm-cpu-text">10%</span></div>
-                                        <div class="cm-pill"><span>Estimate</span><b id="cm-cpu-est">Frame time</b></div>
-                                    </div>
-                                    <canvas id="cm-cpu-canvas" width="900" height="240"></canvas>
-                                </div>
-                                <div class="cm-chart-box">
-                                    <div class="cm-chart-header">
-                                        <div class="cm-label">RAM Usage <span id="cm-ram-text">0%</span></div>
-                                        <div class="cm-pill"><span>Source</span><b id="cm-ram-src">Auto</b></div>
-                                    </div>
-                                    <canvas id="cm-ram-canvas" width="900" height="240"></canvas>
-                                    <div class="cm-stats">
-                                        <div class="cm-stat">
-                                            <div class="cm-k">JS Heap Used</div>
-                                            <div class="cm-v" id="cm-heap-used">4.9 MB</div>
-                                        </div>
-                                        <div class="cm-stat">
-                                            <div class="cm-k">JS Heap Limit</div>
-                                            <div class="cm-v" id="cm-heap-limit">4192.0 MB</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cm-topbar">
-                            <div class="cm-title"><h3></h3></div>
-                            <div class="cm-controls">
-                                <button id="cm-btn-ram" class="cm-btn cm-btn-primary">Dọn RAM</button>
-                                <button id="cm-btn-cpu" class="cm-btn cm-btn-primary">Dọn CPU</button>
-                                <button id="cm-btn-fps" class="cm-btn cm-btn-danger">Lock FPS: OFF</button>
-                                <div class="cm-pill">
-                                    <span>FPS</span><b id="cm-fps-now">60.0</b>
-                                    <span>• Mode</span><b id="cm-mode-now">Unlocked</b>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cm-panel cm-panel-console">
-                            <h4>Console</h4>
-                            <div id="cm-console" class="cm-console" aria-live="polite"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <button class="activate-btn" id="activate-btn">
-                <i class="fas fa-power-off"></i> 𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛 STARTS 🚀
-            </button>
-            <div class="footer">© 2026 BẢNG QUYỀN HNAMX</div>
-        </main>
-
-        <div id="special-menu" class="modal hidden" aria-hidden="true">
-            <div class="modal-backdrop" id="modal-backdrop"></div>
-            <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-                <div class="modal-header">
-                    <h3 id="modal-title"><i class="fas fa-bolt"></i> 𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛</h3>
-                    <button class="modal-close" id="modal-close" aria-label="Đóng"><i class="fas fa-times"></i></button>
-                </div>
-                <div class="modal-infobox" id="modal-infobox">
-                    <i class="fas fa-circle-info"></i>𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛 Đã Mở Hãy Sẵn Sàn Làm Chủ Cuộc Chơi Nào
-                    <button class="infobox-close" id="infobox-close" aria-label="Đóng"><i class="fas fa-xmark"></i></button>
-                </div>
-                <div class="modal-body">
-                    <ul class="feature-list">
-                        <li class="feature"><label><input type="checkbox" id="f-anti-shake">HEAD FIX PANEL 𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛</label></li>
-                        <li class="feature"><label><input type="checkbox" id="f-aim-assist">SHAKE FIX PANEL 𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛</label></li>
-                        <li class="feature"><label><input type="checkbox" id="f-touch-boost">QUICK HOLD PANEL 𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛</label></li>
-                        <li class="feature"><label><input type="checkbox" id="f-pro-mode">AIMMOD PANEL 𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛</label></li>
-                    </ul>
-                </div>
-                <div class="modal-actions">
-                    <button id="modal-apply" class="btn-primary"><i class="fas fa-check"></i>ON PANEL 𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛</button>
-                </div>
-            </div>
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-cube section-icon"></i> CHỨC NĂNG</h2>
+            <div class="function-item"><span class="function-text">AIMLOCK (Khoá Tâm Đầu)</span><label class="toggle-switch"><input type="checkbox" class="toggle-input" id="config-toggle"><span class="toggle-label"><span class="toggle-slider"></span></span></label></div>
+            <div class="function-item"><span class="function-text">FEATHER AIM (Nhẹ Tâm)</span><label class="toggle-switch"><input type="checkbox" class="toggle-input" id="lux-toggle"><span class="toggle-label"><span class="toggle-slider"></span></span></label></div>
+            <div class="function-item"><span class="function-text">STEADY HOLD (Đầm Tâm)</span><label class="toggle-switch"><input type="checkbox" class="toggle-input" id="fix-rung-toggle"><span class="toggle-label"><span class="toggle-slider"></span></span></label></div>
+            <div class="function-item"><span class="function-text">ANCHOR AIM (Ghìm Tâm)</span><label class="toggle-switch"><input type="checkbox" class="toggle-input" id="nhe-tam-toggle"><span class="toggle-label"><span class="toggle-slider"></span></span></label></div>
+            <div class="function-item"><span class="function-text">DRIFT FIX (Fix Lạc Đạn)</span><label class="toggle-switch"><input type="checkbox" class="toggle-input" id="lock-dau-toggle"><span class="toggle-label"><span class="toggle-slider"></span></span></label></div>
         </div>
 
-        <div id="site-notice" class="notice-modal" aria-hidden="false">
-            <div class="notice-backdrop" id="notice-backdrop"></div>
-            <div class="notice-card" role="dialog" aria-modal="true" aria-labelledby="notice-title">
-                <div class="notice-head">
-                    <h4 id="notice-title" class="notice-title">Hoanq NAM<span class="verify"><i class="fas fa-check"></i></span></h4>
-                </div>
-                <div class="admin-card">
-                    <img src="./𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛_files/IMG-1637.jpg" class="admin-avatar">
-                    <div class="admin-name">Hoanq Nam</div>
-                    <div class="admin-role">Support / Marketing</div>
-                    <a href="https://www.facebook.com/share/1E6PeCGH8D/?mibextid=wwXIfr" class="uchiha-btn">Facebook</a>
-                    <a href="https://zalo.me/0978632810" class="uchiha-btn">Zalo</a>
-                </div>
-                <ul class="notice-list" id="notice-list">
-                    <li class="notice-item"><i class="fas "></i><span>UY TÍN - CHẤT LƯỢNG - AN TOÀN - HIỆU QUẢ</span></li>
-                    <li class="notice-item"><i class="fas "></i><span>KHÔNG CAN THIỆP PHẦN MỀM THỨ 3 AN TOÀN 100%</span></li>
-                    <li class="notice-item"><i class="fas "></i><span>TINH CHỈNH NHANH CẤU HÌNH TRONG 1 CHẠM</span></li>
-                </ul>
-                <div class="notice-actions">
-                    <button class="btn-gold" id="notice-3h"><i class="fas fa-clock"></i>Ẩn Trong 3 Giờ</button>
-                    <button class="btn-red" id="notice-ok"><i class="fas fa-circle-check"></i> Đóng</button>
-                </div>
-            </div>
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-cube section-icon"></i> ĐỘ NHẠY</h2>
+            <div class="sensi-item"><div class="sensi-icon"><i class="fas fa-mobile-alt"></i></div><div class="sensi-info"><span class="sensi-label">DEVICE:</span><span class="sensi-value">IPHONE</span></div></div>
+            <div class="sensi-item"><div class="sensi-icon"><i class="fas fa-palette"></i></div><div class="sensi-info"><span class="sensi-label">CHẾ ĐỘ:</span><select id="mode-select" class="dropdown-select"><option value="muot-ma">Mượt Mà</option><option value="cao-cap">Cao Cấp</option><option value="tieu-chuan">Tiêu Chuẩn</option></select></div></div>
+            <div class="sensi-item"><div class="sensi-icon"><i class="fas fa-crosshairs"></i></div><div class="sensi-info"><span class="sensi-label">DPI:</span><select id="dpi-select" class="dropdown-select"><option value="1.0">1.0x</option><option value="1.5">1.5x</option><option value="2.0">2.0x</option><option value="2.5">2.5x</option><option value="3.0">3.0x</option></select></div></div>
+        </div>
+
+        <button class="activate-btn" id="activate-btn"><i class="fas fa-power-off"></i> SUPER TECH STARTS 🚀</button>
+        <div class="footer">© 2026 BẢNG QUYỀN HNAMX</div>
+    </div>
+
+    <div class="modal hidden" id="special-menu">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-dialog">
+            <div class="modal-header"><h3><i class="fas fa-bolt"></i> SUPER TECH</h3><button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button></div>
+            <div class="modal-infobox" id="modal-infobox"><i class="fas fa-circle-info"></i> Sẵn Sàng Làm Chủ Cuộc Chơi<button class="infobox-close" id="infobox-close"><i class="fas fa-xmark"></i></button></div>
+            <ul class="feature-list">
+                <li class="feature"><label><input type="checkbox" id="f-anti-shake"> HEAD FIX</label></li>
+                <li class="feature"><label><input type="checkbox" id="f-aim-assist"> SHAKE FIX</label></li>
+                <li class="feature"><label><input type="checkbox" id="f-touch-boost"> QUICK HOLD</label></li>
+                <li class="feature"><label><input type="checkbox" id="f-pro-mode"> AIMMOD</label></li>
+            </ul>
+            <button class="btn-primary" id="modal-apply"><i class="fas fa-check"></i> ON PANEL</button>
         </div>
     </div>
 
-    <!-- ===== GATE NHẬP KEY Kaidz ===== -->
-    <div id="vgGate" style="display: grid;">
+    <div class="notice-modal hidden" id="site-notice">
+        <div class="notice-backdrop" id="notice-backdrop"></div>
+        <div class="notice-card">
+            <h4 class="notice-title">Hoanq NAM <span style="color:#22c55e"><i class="fas fa-check-circle"></i></span></h4>
+            <div class="admin-card"><div class="admin-name">Hoanq Nam</div><div class="admin-role">Support / Marketing</div><a href="https://www.facebook.com/share/1E6PeCGH8D/" class="uchiha-btn">Facebook</a><a href="https://zalo.me/0978632810" class="uchiha-btn">Zalo</a></div>
+            <ul class="notice-list">
+                <li class="notice-item"><i class="fas fa-check-circle" style="color:#22c55e"></i> UY TÍN - CHẤT LƯỢNG - AN TOÀN</li>
+                <li class="notice-item"><i class="fas fa-shield-halved" style="color:#3b82f6"></i> KHÔNG CAN THIỆP PHẦN MỀM THỨ 3</li>
+                <li class="notice-item"><i class="fas fa-bolt" style="color:#f59e0b"></i> TINH CHỈNH NHANH 1 CHẠM</li>
+            </ul>
+            <div class="notice-actions"><button class="btn-gold" id="notice-3h"><i class="fas fa-clock"></i> Ẩn 3 Giờ</button><button class="btn-red" id="notice-ok"><i class="fas fa-check-circle"></i> Đóng</button></div>
+        </div>
+    </div>
+
+    <div id="vgGate">
         <div class="vg-panel">
-            <div class="vg-hd">
-                <div class="vg-brand-block">
-                    <p class="vg-tag">Secure Access</p>
-                    <h3 class="vg-brand">API SERVER KEY</h3>
-                </div>
-                <button class="vg-close" id="vgReset" aria-label="Nhập lại key">↻</button>
-            </div>
-            <div class="vg-body">
-                <section class="vg-card">
-                    <div class="vg-label">Mã kích hoạt</div>
-                    <div class="vg-field">
-                        <input id="vgKey" class="vg-input" type="text" placeholder="Nhập key..." autocomplete="off">
-                        <button class="vg-icon" id="vgPasteKey" title="Dán mã">
-                            <svg viewBox="0 0 24 24" fill="none"><path d="M8 4h8v4h4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4h4Z" stroke="currentColor" stroke-width="1.6"></path><path d="M9 2h6v3a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1V2Z" stroke="currentColor" stroke-width="1.6"></path></svg>
-                            <span>Dán</span>
-                        </button>
-                        <button class="vg-icon" id="vgDelKey" title="Xóa mã">
-                            <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M6 7l1 13a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-13" stroke="currentColor" stroke-width="1.6"></path><path d="M10 11v7M14 11v7" stroke="currentColor" stroke-width="1.6"></path></svg>
-                            <span>Xóa</span>
-                        </button>
-                    </div>
-                    <div style="margin-top:18px">
-                        <div class="vg-label">Mã thiết bị</div>
-                        <div class="vg-field">
-                            <input id="vgDev" class="vg-input" type="text" readonly="">
-                            <button class="vg-icon" id="vgCopyDev" title="Sao chép mã thiết bị">
-                                <svg viewBox="0 0 24 24" fill="none"><path d="M9 9h8a2 2 0 0 1 2 2v8a 2 2 0 0 1-2 2H9a 2 2 0 0 1-2-2v-8a 2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6"></path><path d="M7 15H6a 2 2 0 0 1-2-2V5a 2 2 0 0 1 2-2h8a 2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="1.6"></path></svg>
-                                <span>Sao chép</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="vg-actions">
-                        <button class="vg-btn vg-btn--pri" id="vgActive">Kích hoạt</button>
-                    </div>
-                </section>
-                <section class="vg-card vg-summary">
-                    <div class="vg-summary-block">
-                        <h4>Trạng thái</h4>
-                        <p id="vgState">Chưa kích hoạt</p>
-                    </div>
-                    <div class="vg-summary-block">
-                        <h4>Hạn sử dụng</h4>
-                        <p id="vgExpiry">--/--/--</p>
-                    </div>
-                    <div class="vg-summary-block">
-                        <h4>ID Thiết bị</h4>
-                        <p id="vgDevDisplay">DEVICE-ID</p>
-                    </div>
-                </section>
-            </div>
-            <div class="vg-msg" id="vgMsg">Nhập key <b>Kaidz</b> để kích hoạt VIP vĩnh viễn.</div>
-            <div class="vg-foot">
-                <span>Lớp bảo vệ VSH TECH</span>
-                <strong id="vgSta">Chưa kích hoạt</strong>
-            </div>
+            <p class="vg-tag">Secure Access</p>
+            <h3 class="vg-brand">API SERVER KEY</h3>
+            <input id="vgKey" class="vg-input" type="text" placeholder="Nhập key..." autocomplete="off">
+            <button class="vg-btn vg-btn--pri" id="vgActive">KÍCH HOẠT</button>
+            <div class="vg-msg" id="vgMsg">🔑 Key: <b>Kaidz</b></div>
         </div>
     </div>
 
-    <!-- ===== SCRIPT KEY TĨNH Kaidz ===== -->
     <script>
-        (function() {
-            const MASTER_KEY = "Kaidz";
+        // PARTICLES
+        (function(){const c=document.getElementById("particles-canvas");if(!c)return;const x=c.getContext("2d");let W,H,ps=[],rf;function rs(){W=c.width=window.innerWidth;H=c.height=window.innerHeight;c.style.width=W+"px";c.style.height=H+"px";ps=[];for(let i=0;i<80;i++)ps.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+1})}function st(){x.clearRect(0,0,W,H);for(const p of ps){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,p.r,0,2*Math.PI);x.fillStyle="rgba(255,255,255,0.5)";x.fill()}for(let i=0;i<ps.length;i++){const a=ps[i];for(let j=i+1;j<ps.length;j++){const b=ps[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<120){x.strokeStyle=`rgba(124,242,211,${0.1*(1-d/120)})`;x.lineWidth=.5;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}}rf=requestAnimationFrame(st)}window.addEventListener("resize",rs);rs();rf=requestAnimationFrame(st)})();
 
-            // Chặn fetch
-            const origFetch = window.fetch;
-            window.fetch = function() {
-                return Promise.resolve(new Response(JSON.stringify({
-                    valid: true,
-                    key: MASTER_KEY,
-                    expiry: "2099-12-31"
-                }), { status: 200 }));
-            };
+        // KEY GATE
+        const K="Kaidz",gt=document.getElementById('vgGate'),ki=document.getElementById('vgKey'),ab=document.getElementById('vgActive'),mg=document.getElementById('vgMsg');
+        ab.addEventListener('click',()=>{if(ki.value.trim()===K){mg.textContent='✅ Key Kaidz hợp lệ!';mg.className='vg-msg ok';setTimeout(()=>{document.body.classList.remove('vg-locked')},600)}else{mg.textContent='❌ Key sai! Key: Kaidz';mg.className='vg-msg err';ki.value=''}});
+        ki.addEventListener('keydown',e=>{if(e.key==='Enter')ab.click()});
 
-            // Khi bấm "Kích hoạt" -> check key Kaidz
-            document.addEventListener('DOMContentLoaded', function() {
-                const keyInput = document.getElementById('vgKey');
-                const activeBtn = document.getElementById('vgActive');
-                const gate = document.getElementById('vgGate');
-                const state = document.getElementById('vgState');
-                const expiry = document.getElementById('vgExpiry');
-                const sta = document.getElementById('vgSta');
-                const msg = document.getElementById('vgMsg');
-                const devDisplay = document.getElementById('vgDevDisplay');
+        // TOAST
+        function toast(t){let e=document.querySelector(".toast");if(!e){e=document.createElement("div");e.className="toast";document.body.appendChild(e)}e.textContent=t;e.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>e.classList.remove("show"),2000)}
 
-                // Tạo device ID
-                const devId = 'DEV-' + Math.random().toString(36).substr(2, 9).toUpperCase();
-                if (devDisplay) devDisplay.textContent = devId;
-                const devInput = document.getElementById('vgDev');
-                if (devInput) devInput.value = devId;
-
-                // Nút kích hoạt
-                activeBtn.addEventListener('click', function() {
-                    const inputKey = keyInput.value.trim();
-                    if (inputKey === MASTER_KEY) {
-                        // Thành công
-                        if (state) state.textContent = 'Đã kích hoạt - Kaidz VIP';
-                        if (expiry) expiry.textContent = '2099-12-31';
-                        if (sta) sta.textContent = 'ACTIVE';
-                        if (msg) {
-                            msg.textContent = '✅ Key Kaidz hợp lệ! VIP vĩnh viễn. Đang mở khóa...';
-                            msg.className = 'vg-msg ok';
-                        }
-                        // Mở khóa sau 1 giây
-                        setTimeout(function() {
-                            if (gate) gate.style.display = 'none';
-                            document.body.classList.remove('vg-locked');
-                        }, 1000);
-                    } else {
-                        // Sai key
-                        if (msg) {
-                            msg.textContent = '❌ Key sai! Key đúng là: Kaidz';
-                            msg.className = 'vg-msg err';
-                        }
-                        keyInput.value = '';
-                        keyInput.focus();
-                    }
-                });
-
-                // Enter cũng kích hoạt
-                keyInput.addEventListener('keydown', function(e) {
-                    if (e.key === 'Enter') activeBtn.click();
-                });
-
-                // Nút Reset
-                document.getElementById('vgReset').addEventListener('click', function() {
-                    keyInput.value = '';
-                    keyInput.focus();
-                });
-
-                // Nút Dán
-                document.getElementById('vgPasteKey').addEventListener('click', async function() {
-                    try {
-                        const text = await navigator.clipboard.readText();
-                        keyInput.value = text;
-                    } catch(e) {
-                        keyInput.focus();
-                    }
-                });
-
-                // Nút Xóa
-                document.getElementById('vgDelKey').addEventListener('click', function() {
-                    keyInput.value = '';
-                    keyInput.focus();
-                });
-
-                // Nút Copy Device ID
-                document.getElementById('vgCopyDev').addEventListener('click', async function() {
-                    try {
-                        await navigator.clipboard.writeText(devId);
-                    } catch(e) {}
-                });
-
-                console.log('%c🔐 KEY TĨNH: Kaidz | VIP 2099 | Nhập "Kaidz" để mở khóa', 'color:cyan;font-size:14px;');
-            });
-        })();
+        // APP
+        document.addEventListener("DOMContentLoaded",()=>{
+            const $=s=>document.querySelector(s);
+            const store={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+            function reflect(){document.querySelectorAll(".toggle-switch").forEach(sw=>{const i=sw.querySelector(".toggle-input"),it=sw.closest(".function-item");if(!i||!it)return;it.style.borderColor=i.checked?"rgba(34,197,94,.6)":"rgba(255,255,255,.06)"})}
+            const ct=$("#config-toggle"),lt=$("#lux-toggle"),fr=$("#fix-rung-toggle"),nt=$("#nhe-tam-toggle"),ld=$("#lock-dau-toggle"),ms=$("#mode-select"),ds=$("#dpi-select"),acb=$("#activate-btn");
+            if(ct)ct.checked=store.get("config-enabled",false);if(lt)lt.checked=store.get("lux-enabled",false);if(fr)fr.checked=store.get("fix-rung-enabled",false);if(nt)nt.checked=store.get("nhe-tam-enabled",false);if(ld)ld.checked=store.get("lock-dau-enabled",false);if(ms)ms.value=store.get("mode","muot-ma");if(ds)ds.value=store.get("dpi","1.0");reflect();
+            if(ct)ct.addEventListener("change",()=>{store.set("config-enabled",ct.checked);reflect();toast(ct.checked?"AIMLOCK ON":"AIMLOCK OFF")});
+            if(lt)lt.addEventListener("change",()=>{store.set("lux-enabled",lt.checked);reflect();toast(lt.checked?"FEATHER AIM ON":"FEATHER AIM OFF")});
+            if(fr)fr.addEventListener("change",()=>{store.set("fix-rung-enabled",fr.checked);reflect();toast(fr.checked?"STEADY HOLD ON":"STEADY HOLD OFF")});
+            if(nt)nt.addEventListener("change",()=>{store.set("nhe-tam-enabled",nt.checked);reflect();toast(nt.checked?"ANCHOR AIM ON":"ANCHOR AIM OFF")});
+            if(ld)ld.addEventListener("change",()=>{store.set("lock-dau-enabled",ld.checked);reflect();toast(ld.checked?"DRIFT FIX ON":"DRIFT FIX OFF")});
+            if(ms)ms.addEventListener("change",()=>{store.set("mode",ms.value);toast("Chế độ: "+ms.value)});
+            if(ds)ds.addEventListener("change",()=>{store.set("dpi",ds.value);toast("DPI: "+ds.value+"x")});
+            if(acb)acb.addEventListener("click",()=>toast("SUPER TECH ACTIVATED! 🚀"));
+            const menu=$("#special-menu"),bd=$("#modal-backdrop"),mc=$("#modal-close"),ic=$("#infobox-close"),ap=$("#modal-apply"),f1=$("#f-anti-shake"),f2=$("#f-aim-assist"),f3=$("#f-touch-boost"),f4=$("#f-pro-mode");
+            $("#special-menu-btn").addEventListener("click",()=>{menu.classList.remove("hidden")});
+            if(bd)bd.addEventListener("click",()=>menu.classList.add("hidden"));
+            if(mc)mc.addEventListener("click",()=>menu.classList.add("hidden"));
+            if(ic)ic.addEventListener("click",()=>$("#modal-infobox").classList.add("hidden"));
+            if(ap)ap.addEventListener("click",()=>{store.set("feat-anti-shake",!!f1&&f1.checked);store.set("feat-aim-assist",!!f2&&f2.checked);store.set("feat-touch-boost",!!f3&&f3.checked);store.set("feat-pro-mode",!!f4&&f4.checked);toast("ĐÃ ÁP DỤNG");menu.classList.add("hidden")});
+            const ntce=$("#site-notice"),no=$("#notice-ok"),n3=$("#notice-3h"),nb=$("#notice-backdrop");
+            if(no)no.addEventListener("click",()=>ntce.classList.add("hidden"));
+            if(n3)n3.addEventListener("click",()=>{store.set("notice-until",Date.now()+3*60*60*1000);ntce.classList.add("hidden")});
+            if(nb)nb.addEventListener("click",()=>ntce.classList.add("hidden"));
+            const until=store.get("notice-until",0);if(Date.now()>Number(until))ntce.classList.remove("hidden");
+            const ann=$("#announce-bar");if(ann&&!store.get("announcement-dismissed",false))ann.style.display="flex";
+            $("#announce-close")?.addEventListener("click",()=>{ann.style.display="none";store.set("announcement-dismissed",true)});
+        });
     </script>
-
-    <script src="./𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛_files/panel-actions.js.tải xuống"></script>
-    <script src="./𝗦𝗨𝗣𝗣𝗘𝗥 𝗧𝗘𝗖𝗛_files/app.js.tải xuống"></script>
-
 </body>
 </html>
